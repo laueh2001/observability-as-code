@@ -1,5 +1,6 @@
 # @instana-integration/cp4aiops
 
+This integration package is designed to showcase observability capabilities within Instana by monitoring the IBM Cloud Pak for Watson AIOps (CP4AIOps) v4.13. This package includes custom dashboards and events that specifically monitoring of CP4AIOps components such as Kafka, Cassandra, PostgreSQL as well as the CP4AIOps's Topology and RedHat OCP metrics.
 
 ## Dashboards
 
@@ -35,6 +36,11 @@ Below are the events that are currently supported by this integration package.
 | CP4AIOpsPostgresConnectionsCritical                 | Triggered when active connections exceed 90% of the max for 90s  |
 | CP4AIOpsPostgresReplicationLagCritical              | Triggered when lag exceeds 300 seconds for 5 minutes window      |
 
+## Metrics
+
+### Semantic Conventions
+
+### Resource Attributes
 
 ## Installation and Usage
 
@@ -52,7 +58,7 @@ Importing the package into Instana:
 $ stanctl-integration import --package @instana-integration/cp4aiops \
   --server $INSTANA_SERVER \
   --token $API_TOKEN \
-  --set namespace.name=$CP4AIOPS_NAMESPACE \
+  --set namespace.name=$CP4AIOPS_NAMESPACE
   
 ```
 
